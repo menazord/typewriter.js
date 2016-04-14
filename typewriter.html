@@ -1,0 +1,117 @@
+<html>
+	<head>
+		<title>TypeWriter test</title>
+
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">	
+
+		<style type="text/css">
+
+			body {
+				font-size: 12px;
+			}
+
+			body pre{
+				font-size: 10px;
+			}
+
+			.typewrite{
+				font-size: 20px;
+				font-weight: 300;
+			}
+
+			.typewrite:after {
+				content: '';
+				display: inline-block;
+				position: relative;
+				top: 0px;
+				width: 3px;
+				height: 20px;
+				background: red;
+				opacity: 0;
+				-webkit-animation: showBlink steps(1) 1s infinite;
+				animation: showBlink steps(1) 1s infinite;					
+			}
+
+			@-webkit-keyframes showBlink {
+			  0%   { opacity: 1; }
+			  50%  { opacity: 0; }
+			  100% { opacity: 1; }
+			}
+			@keyframes showBlink {
+			  0%   { opacity: 1; }
+			  50%  { opacity: 0; }
+			  100% { opacity: 1; }
+			}
+		</style>
+	</head>
+	<body>
+		<div class="container">
+			<h1 class="text-center">Typewrite</h1>
+			<br>
+			<div class="row text-center">
+				<span class="typewrite" data-period="3000" data-type='[ "ESTE", "EJEMPLO", "UTILIZA" , "TYPEWRITER" ] '>
+					HOLA
+				</span>				
+			</div>
+			<br>			
+			<p>
+				Para lograr el efecto de m&aacute;quina de escribir (typewrite) primero se debe incluir el
+				JS en el HTML.
+			</p>
+			<pre>
+					&lt;script src="typewriter.js"&gt;&lt;/script&gt;
+			</pre>
+			<p>
+				Luego a&ntilde;adir el siguiente CSS, el cual le da el estilo al texto con la clase <code>typewrite</code>,
+				y se customiza el cursor parpadeante con la clase <code>typewrite:after</code>
+			</p>
+			<pre class="pre-scrollable">
+				&lt;style type="text/css"&gt;
+					.typewrite{
+						font-size: 20px;
+						font-weight: 300;
+					}
+
+					.typewrite:after {
+						content: ''; /* Sin contenido despues del cursor */ 
+						display: inline-block;
+						position: relative;
+						top: 0px;
+						width: 3px; /* ancho del cursor */
+						height: 20px; /* altura del cursor */
+						background: red; /* color del cursor */
+						opacity: 0; 
+						-webkit-animation: showBlink steps(1) 1s infinite; /* animacion (showBlink) */
+						animation: showBlink steps(1) 1s infinite;					
+					}
+
+					/* showBlink keyframes */
+					@-webkit-keyframes showBlink {
+					  0%   { opacity: 1; }
+					  50%  { opacity: 0; }
+					  100% { opacity: 1; }
+					}
+					@keyframes showBlink {
+					  0%   { opacity: 1; }
+					  50%  { opacity: 0; }
+					  100% { opacity: 1; }
+					}
+				&lt;/style&gt;
+			</pre>
+			<p> 
+				Finalmente debes crear un <code>&lt;span class="typewrite"&gt;</code>, que contenga dos atributos. El primero es <code>data-period</code>, que dicta cuantos milisegundos dura el texto antes de ser borrado y reemplazado. El segundo atributo es <code>data-type</code>, el cual contiene una lista de valores, los cuales seran animados uno tras otro, en el mismo orden.
+			</p>
+			<pre>
+				&lt;n class="typewrite" data-period="3000" data-type='[ "ESTE", "EJEMPLO", "UTILIZA" , "TYPEWRITER" ] '&gt;
+					HOLA
+				&lt;/span&gt;							
+			</pre>
+			<p>
+				Puedes revisar el c&oacute;digo fuente de esta p&aacute;gina para ver como funciona
+			</p>
+			<br>
+		</div>
+    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+	<script src="typewriter.js"></script>
+	</body>
+</html>
