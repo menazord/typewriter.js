@@ -41,7 +41,7 @@ Luego añadir el siguiente CSS, el cual le da el estilo al texto con la clase ty
 			
 Finalmente debes crear un <span class="typewrite">, que contenga dos atributos. El primero es data-period, que dicta cuantos milisegundos dura el texto antes de ser borrado y reemplazado. El segundo atributo es data-type, el cual contiene una lista de valores, los cuales seran animados uno tras otro, en el mismo orden.
 
-				<n class="typewrite" data-period="3000" data-type='[ "ESTE", "EJEMPLO", "UTILIZA" , "TYPEWRITER" ] '>
+				<span class="typewrite" data-period="3000" data-type='[ "ESTE", "EJEMPLO", "UTILIZA" , "TYPEWRITER" ] '>
 					HOLA
 				</span>							
 			
